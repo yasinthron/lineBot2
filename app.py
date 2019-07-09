@@ -23,12 +23,12 @@ def callback():
     user = decoded["events"][0]['replyToken']
     userText = decoded["events"][0]['message']['text']
     #sendText(user,userText)
-    if (A == 'Hi') :
-        print('Hi there')
-    elif (A == 'Bye') :
-        print('Bye. hope to see you soon')
+    if (userText == 'Hi') :
+        sendText(user,'Hi there')
+    elif (userText == 'Bye') :
+        sendText(user,'Bye. hope to see you soon')
     else :
-        print("again pls. I'm not sure what i heard")
+        psendText(user,"again pls. I'm not sure what i heard")
 
     return '',200
 
